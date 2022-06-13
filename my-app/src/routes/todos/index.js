@@ -1,6 +1,5 @@
 import { api } from './_api';
 
-/** @type {import('./__types').RequestHandler} */
 export const get = async ({ locals }) => {
 	// locals.userid comes from src/hooks.js
 	const response = await api('get', `todos/${locals.userid}`);
@@ -28,7 +27,6 @@ export const get = async ({ locals }) => {
 	};
 };
 
-/** @type {import('./index').RequestHandler} */
 export const post = async ({ request, locals }) => {
 	const form = await request.formData();
 
@@ -48,7 +46,6 @@ const redirect = {
 	}
 };
 
-/** @type {import('./index').RequestHandler} */
 export const patch = async ({ request, locals }) => {
 	const form = await request.formData();
 
@@ -60,7 +57,6 @@ export const patch = async ({ request, locals }) => {
 	return redirect;
 };
 
-/** @type {import('./index').RequestHandler} */
 export const del = async ({ request, locals }) => {
 	const form = await request.formData();
 
