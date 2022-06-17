@@ -1,12 +1,12 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
+	import logo from './logo_black NEW.png';
 </script>
 
-<header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+<header class="px-4 py-2 bg-black text-white">
+	<div class="">
+		<a href="/">
+			<img class="h-14" src={logo} alt="Auto Prestige" />
 		</a>
 	</div>
 
@@ -52,11 +52,6 @@
 		height: 100%;
 	}
 
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
-	}
 
 	nav {
 		display: flex;
