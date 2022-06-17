@@ -11,16 +11,19 @@
 	</div>
 
 	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
+			<li class:active={$page.url.pathname === '/models'}>
+				<a sveltekit:prefetch href="/models">Models</a>
+			</li>
+			<li class:active={$page.url.pathname === '/test_drive'}>
+				<a sveltekit:prefetch href="/test_drive">Test Drive</a>
+			</li>
 			<li class:active={$page.url.pathname === '/about'}>
 				<a sveltekit:prefetch href="/about">About</a>
 			</li>
-			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">Todos</a>
+			<li class:active={$page.url.pathname === '/contact'}>
+				<a sveltekit:prefetch href="/contact">Contact</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -29,7 +32,9 @@
 	</nav>
 
 	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+		<a href="/log_in">
+			Log In
+		</a>
 	</div>
 </header>
 
@@ -50,13 +55,14 @@
 		justify-content: center;
 		width: 100%;
 		height: 100%;
+		color: white;
 	}
 
 
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
+	
 	}
 
 	svg {
@@ -96,7 +102,7 @@
 		top: 0;
 		left: calc(50% - var(--size));
 		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--accent-color);
+		border-top: var(--size) solid rgb(22, 70, 160);
 	}
 
 	nav a {
@@ -104,16 +110,16 @@
 		height: 100%;
 		align-items: center;
 		padding: 0 1em;
-		color: var(--heading-color);
-		font-weight: 700;
-		font-size: 0.8rem;
+		color: white;
+		font-weight: 600;
+		font-size: 1rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
+		text-decoration: underline rgba(0, 0, 0, 0);
+		transition: text-decoration-color 400ms;
 	}
 
 	a:hover {
-		color: var(--accent-color);
+		text-decoration-color: rgb(255, 255, 255);
 	}
 </style>
