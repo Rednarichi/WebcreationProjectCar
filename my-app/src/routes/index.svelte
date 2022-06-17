@@ -25,8 +25,6 @@
 
 	<h2>
 		try editing <strong>src/routes/index.svelte</strong>
-		<br>
-		Inputting the test input
 	</h2>
 
 	<Counter />
