@@ -1,9 +1,7 @@
 <script>
-	import {supabase} from "..//supabase";
-    import LoginNew from "../LoginNew.svelte";
+	import Login from "../LoginNew.svelte";
 	import Signup from "../Signup.svelte";
 	let currentTab = "Login";
-
 	const changeTab = (tab) => {
 		currentTab = tab;
 	};
@@ -21,7 +19,7 @@
 				</div>
 			</div>
 			{#if currentTab === "Login"}
-				<LoginNew />
+				<Login />
 			{:else}
 				<Signup />
 			{/if}
@@ -35,9 +33,20 @@
 		padding: 1rem;
 		background-color: lightgray;
 	}
-
 	.tab-active {
 		background: black;
 		color: white;
+	}
+	:global(.form-widget) {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		background-color: #FEFFDE;
+		padding: 3rem;
+		border-radius: 0 0 10px 10px;
+	}
+	:global(.form-widget input[type="submit"]) {
+		width: 100%;
+		margin-top: 1rem;
 	}
 </style>

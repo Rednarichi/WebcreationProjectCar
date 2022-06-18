@@ -2,6 +2,9 @@
 	import { supabase } from "./supabase";
 
 	let loading = false;
+	/**
+* @type {any}
+*/
 	let email, password;
 	let message = { success: null, display: "" };
 
@@ -52,3 +55,17 @@
 		{/if}
 	</div>
 </form>
+<style>
+	.form-widget {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		background-color: black;
+		padding: 3rem;
+		border-radius: 0 0 10px 10px;
+	}
+	.form-widget input[type="submit"] {
+		width: 100%;
+		margin-top: 1rem;
+	}
+</style>
