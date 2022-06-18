@@ -10,8 +10,8 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Auto Prestige</title>
+	<meta name="description" content="Car dealership" />
 </svelte:head>
 
 
@@ -21,7 +21,7 @@
 		<video class="w-full" src={Video_cars} type="video/mp4" autoplay loop muted  alt="Blue Lamborguini Aventador">
 	</div>
 
-	<div class="w-full sm:object-cover sm:object-center bg-gray-900 relative group sm:text-1xl">
+	<div class="mt-2 w-full sm:object-cover sm:object-center bg-gray-900 relative group sm:text-1xl">
 		<img class="hover:opacity-80 duration-200" src={Home_cars} alt="Blue Lamborguini Aventador">
 		<a class="absolute inset-x-2 bottom-6 justify-left items-end font-semibold text-white opacity-75 hover:opacity-100 " href="/models">
 			Discover our prestigious models
