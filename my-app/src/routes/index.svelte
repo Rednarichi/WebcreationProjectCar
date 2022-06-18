@@ -3,7 +3,8 @@
 </script>
 
 <script>
-	import Home_cars from '/src/lib/lamborghini-aventador-svj.jpg';
+	import Video_cars from '/src/lib/car_promo_video.mp4';
+	import Home_cars from '/src/lib/lamborghini-aventador-svj.jpg'
 	import Test_drive from '/src/lib/test_drive_car.jpg';
 	import About_drive from '/src/lib/about_drive.jpg';
 </script>
@@ -15,6 +16,10 @@
 
 
 <section>
+
+	<div class="w-full sm:object-cover sm:object-center bg-gray-900 relative group sm:text-1xl">
+		<video class="w-full" src={Video_cars} type="video/mp4" autoplay loop muted  alt="Blue Lamborguini Aventador">
+	</div>
 
 	<div class="w-full sm:object-cover sm:object-center bg-gray-900 relative group sm:text-1xl">
 		<img class="hover:opacity-80 duration-200" src={Home_cars} alt="Blue Lamborguini Aventador">
