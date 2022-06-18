@@ -3,7 +3,9 @@
 </script>
 
 <script>
-	import Counter from '$lib/Counter.svelte';
+	import Home_cars from '/src/lib/lamborghini-aventador-svj.jpg';
+	import Test_drive from '/src/lib/test_drive_car.jpg';
+	import About_drive from '/src/lib/about_drive.jpg';
 </script>
 
 <svelte:head>
@@ -11,51 +13,34 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
+
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</span>
 
-		to your new<br />SvelteKit app
-	</h1>
+	<div class="w-full sm:object-cover sm:object-center bg-gray-900 relative group sm:text-1xl">
+		<img class="hover:opacity-80 duration-200" src={Home_cars} alt="Blue Lamborguini Aventador">
+		<a class="absolute inset-x-2 bottom-6 justify-left items-end font-semibold text-white opacity-75 hover:opacity-100 " href="/models">
+			Discover our prestigious models
+		</a>	
+	</div>
 
-	<h2>
-		test <strong>src/routes/index.svelte</strong>
-	</h2>
+	<div class="mt-2 w-full sm:object-cover sm:object-center bg-gray-900 relative group pd-">
+		<img class="hover:opacity-80 duration-200" src={Test_drive} alt="Test Drive">
+		<a class="absolute inset-x-100 bottom-6 justify-right items-end font-semibold text-white opacity-75 hover:opacity-100 " href="/test_drive">
+			Test our prestigious cars
+		</a>	
+	</div>
 
-	<Counter />
+	<div class="mt-2 w-full sm:object-cover sm:object-center bg-gray-900 relative group pd-">
+		<img class="hover:opacity-80 duration-200" src={About_drive} alt="About Us">
+		<a class="absolute inset-x-100 bottom-6 justify-right items-end font-semibold text-white opacity-75 hover:opacity-100 " href="/about">
+			Learn about us
+		</a>	
+	</div>
+
 </section>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
+a {
+	font-size: 2.5em;
+}
 </style>
