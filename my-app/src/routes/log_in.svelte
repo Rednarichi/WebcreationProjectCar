@@ -2,7 +2,8 @@
 	import Login from "../LoginNew.svelte";
 	import Signup from "../Signup.svelte";
 	let currentTab = "Login";
-	const changeTab = (tab) => {
+	// @ts-ignore
+	let changeTab = (tab) => {
 		currentTab = tab;
 	};
 </script>
