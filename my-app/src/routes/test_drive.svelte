@@ -117,7 +117,7 @@
 </script>
 
 
-<h1 class="text_xl text-white">Book your test drive !</h1>
+<h1 class="text_xl text-white">Book your test drive ! </h1>
 <form on:submit|preventDefault={returnSubmit}>
     <BrandSelect bind:selectedBrand bind:selectedModel></BrandSelect>
     <ModelSelect bind:selectedModel {selectedBrand}></ModelSelect>  
