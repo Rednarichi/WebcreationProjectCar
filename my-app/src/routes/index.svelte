@@ -3,7 +3,7 @@
 </script>
 
 <script>
-	import Video_cars from '/src/lib/car_promo_video.mp4';
+	import Video_cars from '$lib/car_promo_video.mp4';
 	import Home_cars from '/src/lib/lamborghini-aventador-svj.jpg'
 	import Test_drive from '/src/lib/test_drive_car.jpg';
 	import About_drive from '/src/lib/about_drive.jpg';
