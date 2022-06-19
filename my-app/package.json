@@ -19,6 +19,7 @@
 		"@sveltejs/kit": "next",
 		"@types/cookie": "^0.5.1",
 		"autoprefixer": "^10.4.4",
+		"carbon-components-svelte": "^0.66.0",
 		"dotenv": "^16.0.1",
 		"install": "^0.13.0",
 		"npm": "^8.12.2",
@@ -36,6 +37,7 @@
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
 		"@supabase/supabase-js": "^1.35.3",
-		"cookie": "^0.4.1"
+		"cookie": "^0.4.1",
+		"svelte-forms-lib": "^2.0.1"
 	}
 }

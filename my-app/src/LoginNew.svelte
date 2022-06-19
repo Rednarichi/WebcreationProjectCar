@@ -26,13 +26,13 @@
 	on:submit|preventDefault={handleLogin}
 >
 	<div class="form-widget">
-		<h1 class="header">Welcome to Auto Prestige login portal</h1>
-		<p class="description">Enter your email below to get a link to login</p>
+		<h1 class="text-center text-3xl text-gray-600">Welcome to login portal</h1>
+		<p class="text-center text-xl text-gray-600">Enter your email below to get a link to login</p>
 		<div class="form-group">
 			<label for="email">Email Address</label>
 			<input
 				id='email'
-				class="form-control"
+				class="form-group"
 				type="email"
 				placeholder="Your email"
 				bind:value={email}
@@ -44,17 +44,16 @@
 				id='password'
 				class="form-control"
 				type="password"
-				placeholder="Set your new password"
+				placeholder="Input your password"
 				bind:value={password}
 			/>
 		</div>
 		<div>
-			<input
-				type="submit"
-				class="btn btn-success"
-				value={loading ? "Loading" : "Log in"}
-				disabled={loading}
-			/>
+			<button
+			type="submit"
+			class=" w-full mx-auto w-100px text-center shadow-sm rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4">
+			Log In
+			</button>
 		</div>
 		{#if message.success != null}
 			<div class="alert {message.success ? 'alert-success' : 'alert-danger'}" role="alert">
@@ -64,18 +63,14 @@
 	</div>
 
 </form>
-
 <style>
 	.form-widget {
-		display: flex;
+		display: center;
 		flex-direction: column;
-		gap: 10px;
+		gap: 8px;
 		background-color: #FEFFDE;
-		padding: 3rem;
-		border-radius: 0 0 10px 10px;
+		padding: 2rem;
+		border-radius: 0 0 8px 8px;
 	}
-	.form-widget input[type="submit"] {
-		width: 100%;
-		margin-top: 1rem;
-	}
+
 </style>
