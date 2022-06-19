@@ -1,13 +1,20 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
+	import "carbon-components-svelte/css/g10.css";
 </script>
+
 
 <Header />
 
 <main>
 	<slot />
 </main>
+
+<svelte:head>
+	<title>Auto Prestige</title>
+	<meta name="description" content="Car dealership" />
+</svelte:head>
 
 <footer>
 

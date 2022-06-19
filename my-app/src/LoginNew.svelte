@@ -1,7 +1,10 @@
 <script>
-	import { supabase } from "./supabase";
+	import { supabase } from './supabase';
 
 	let loading = false;
+	/**
+* @type {any}
+*/
 	let email, password;
 	let message = { success: null, display: "" };
 

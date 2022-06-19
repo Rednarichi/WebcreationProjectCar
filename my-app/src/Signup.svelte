@@ -1,5 +1,5 @@
 <script>
-	import { supabase } from "./supabase";
+	import { supabase } from './supabase.js';
 	let loading = false;
 	let email, password, confirmpassword;
 	let message = { success: null, display: "" };
@@ -28,8 +28,7 @@
 	on:submit|preventDefault={handleSignup}
 >
 	<div class="form-widget">
-		<h1 class="header">Create an account 
-			and join the community of Auto Prestige</h1>
+		<h1 class="header">Create an account and join the community of Auto Prestige</h1>
 
 		<div class="form-group">
 			<label for="email">Email address</label>
