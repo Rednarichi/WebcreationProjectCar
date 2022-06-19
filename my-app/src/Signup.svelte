@@ -1,8 +1,10 @@
 <script>
 	import { supabase } from "./supabase";
 	let loading = false;
-	let email, password, confirmpassword;
-	let message = { success: null, display: "" };
+	let email = ''; 
+	let password = '';
+	let confirmpassword ='';
+	let message = { success: false, display: "" };
 	const handleSignup = async () => {
 		if (password != confirmpassword) {
 			message = { success: false, display: "Password and Confirm Password fields do not match" };
@@ -16,6 +18,7 @@
 			message = { success: true, display: "We have sent you an confirmation email. Please check your email" };
 		} catch (error) {
 			console.log(error);
+			// @ts-ignore
 			let errorMsg = error.error_description || error.message;
 			message = { success: false, display: errorMsg };
 		} finally {
