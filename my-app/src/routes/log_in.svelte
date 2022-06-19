@@ -11,13 +11,13 @@
 </script>
 
 <main class="container mx-auto my-12 max-w-lg">
-    <div class="row flex flex-center">
-        <div class="col-md-4 offset-4 mt-5">
-            <div class="col">
-                <div class="col tab-heading {currentTab == 'Login' ? 'tab-active': ''}" on:click={() => changeTab("Login")}>
+    <div class="col-auto flex-center">
+        <div class=" col-md-4 offset-4 mt-5">
+            <div class="row-auto flex-auto">
+                <div class="row-auto text-center tab-heading {currentTab == 'Login' ? 'tab-active': ''}" on:click={() => changeTab("Login")}>
                     <span>Login</span>
                 </div>
-                <div class="col tab-heading {currentTab == 'Signup' ? 'tab-active': ''}" on:click={() => changeTab("Signup")}>
+                <div class="row-auto text-center tab-heading {currentTab == 'Signup' ? 'tab-active': ''}" on:click={() => changeTab("Signup")}>
                     <span>Create Account</span>
                 </div>
             </div>
@@ -31,6 +31,7 @@
         </div>
     </div>
 </main>
+<slot> </slot>
 
 <style>
     .tab-heading {
@@ -54,4 +55,5 @@
         width: 100%;
         margin-top: 1rem;
     }
+
 </style>
