@@ -9,7 +9,7 @@ import { space } from "svelte/internal";
   </head>
   <header>
 	</header>
-  <body>
+  
 	<div>
 	<h1 class="text-white first-letter:text-center text-4xl font-medium uppercase">Since 2022</h1>
 	<p class="text-white text-justify pr-10 pl-10 mt-3">Let us tell you a story, a beautiful adventure that began in 2022 at essec, with four car enthusiasts at the helm. In order for a desire to become a viable project, it must be carried by people who are both invested and anchored in the field concerned. This is the case for the founders of Auto Prestige who, from their passion, were able to extract the nectar to offer it to their customers.</p>
@@ -28,12 +28,8 @@ import { space } from "svelte/internal";
   
  This is the essence of Auto Prestige: to offer each client a relevant solution according to his initial problem or why not leave his comfort zone by trying out new sensations?
   </p>
-  
-	<script src="script.js"></script>
-	  <div class='image'>
-		  </div>
-		</div>
-  </body>
+  </div>
+ 
 
 <style>
 	body {

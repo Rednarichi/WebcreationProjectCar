@@ -26,7 +26,7 @@
 	on:submit|preventDefault={handleLogin}
 >
 	<div class="form-widget">
-		<h1 class="text-center text-3xl text-gray-600">Welcome to login portal</h1>
+		<h1 class="text-center text-3xl text-gray-600 font-bold">Welcome to login portal</h1>
 		<p class="text-center text-xl text-gray-600">Enter your email below to get a link to login</p>
 		<div class="form-group">
 			<label for="email">Email Address</label>

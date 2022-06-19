@@ -3,7 +3,7 @@
 	<slot />
 </main>
 
-<style class="opacity-5">
+<style>
 	main {
 		flex: 1;
 		display: flex;

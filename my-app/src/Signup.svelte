@@ -31,7 +31,7 @@
 	on:submit|preventDefault={handleSignup}
 >
 	<div class="form-widget">
-		<h1 class="text-center text-3xl text-gray-600">Create an account </h1>
+		<h1 class="text-center text-3xl text-gray-600 font-bold">Create an account </h1>
 		<p class = "text-center text-xl text-gray-600"> Join Auto Prestige community</p>
 
 
