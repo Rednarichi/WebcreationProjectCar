@@ -122,7 +122,7 @@
     <BrandSelect bind:selectedBrand bind:selectedModel></BrandSelect>
     <ModelSelect bind:selectedModel {selectedBrand}></ModelSelect>  
 
-    <span class="text-white text-xl"> Choose your available date: </span><Datepicker bind:selected start={today} end={tomorrow} {theme} />
+    <span class="text-white text-xl"> Choose your available date: </span><Datepicker  start={today} end={tomorrow} {theme} />
     <div class="mb-3 xl:w-96">
         <label class="text-white text-xl py-0 mt-2" for=nDay>Choose your available time slot:</label>
         <select bind:value={nDay} class="form-select appearance-none
