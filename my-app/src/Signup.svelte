@@ -1,8 +1,10 @@
 <script>
-	import { supabase } from './supabase.js';
+	import { supabase } from "./supabase";
 	let loading = false;
-	let email, password, confirmpassword;
-	let message = { success: null, display: "" };
+	let email = ''; 
+	let password = '';
+	let confirmpassword ='';
+	let message = { success: false, display: "" };
 	const handleSignup = async () => {
 		if (password != confirmpassword) {
 			message = { success: false, display: "Password and Confirm Password fields do not match" };
@@ -16,6 +18,7 @@
 			message = { success: true, display: "We have sent you an confirmation email. Please check your email" };
 		} catch (error) {
 			console.log(error);
+			// @ts-ignore
 			let errorMsg = error.error_description || error.message;
 			message = { success: false, display: errorMsg };
 		} finally {
@@ -28,7 +31,9 @@
 	on:submit|preventDefault={handleSignup}
 >
 	<div class="form-widget">
-		<h1 class="header">Create an account and join the community of Auto Prestige</h1>
+		<h1 class="text-center text-3xl text-gray-600">Create an account </h1>
+		<p class = "text-center text-xl text-gray-600"> Join Auto Prestige community</p>
+
 
 		<div class="form-group">
 			<label for="email">Email address</label>
@@ -61,12 +66,11 @@
 			/>
 		</div>
 		<div>
-			<input
-				type="submit"
-				class="btn btn-success"
-				value={loading ? "Loading" : "Sign up"}
-				disabled={loading}
-			/>
+			<button
+			type="submit"
+			class="w-full text-center shadow-sm rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4">
+			Sign Up
+			</button>
 		</div>
 		{#if message.success != null}
 			<div class="alert {message.success ? 'alert-success' : 'alert-danger'}" role="alert">
