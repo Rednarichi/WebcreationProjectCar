@@ -186,6 +186,6 @@
     <div class="text-2xl text-white font-bold">
         To access this page, you should log in :
     </div>
-    <a href="/log_in"> Log In</a>
+    <a class="text-xl text-white  bg-blue-500 w-24 mt-2 px-2 font-bold" href="/log_in" > Log In</a>
     {/if}
-<img class="w-full .bg" src={Test_drive} alt="Test Drive">
+<img class="w-full .bg mt-2" src={Test_drive} alt="Test Drive">
