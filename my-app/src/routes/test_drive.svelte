@@ -5,6 +5,13 @@
     import BrandSelect from "$lib/BrandSelect.svelte"
     import ModelSelect from "$lib/ModelSelect.svelte"
     import { supabase } from '../supabase.js';
+	import {user} from "../stores/authStore";
+
+	user.set(supabase.auth.user());
+
+	supabase.auth.onAuthStateChange((_,session) => {
+		user.set(session?.user)
+	})
 
 
     let selectedBrand = { id: "Ferrari", text: `Ferrari`, cars: [
@@ -116,7 +123,7 @@
 
 </script>
 
-
+{#if $user}
 <h1 class="text_xl text-white">Book your test drive !</h1>
 <form on:submit|preventDefault={returnSubmit}>
     <BrandSelect bind:selectedBrand bind:selectedModel></BrandSelect>
@@ -174,4 +181,11 @@
     </form>
     console.log(nDay)
 
+    {:else}
+     
+    <div class="text-2xl text-white font-bold">
+        To access this page, you should log in :
+    </div>
+    <a href="/log_in"> Log In</a>
+    {/if}
 <img class="w-full .bg" src={Test_drive} alt="Test Drive">
