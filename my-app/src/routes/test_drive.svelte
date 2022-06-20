@@ -1,7 +1,6 @@
 <script>
-    import { Datepicker } from 'svelte-calendar';
+    import SveltyPicker from 'svelty-picker'
     import Test_drive from '/src/lib/test_drive_car.jpg'; 
-    import dayjs from 'dayjs';
     import BrandSelect from "$lib/BrandSelect.svelte"
     import ModelSelect from "$lib/ModelSelect.svelte"
     import { supabase } from '../supabase.js';
@@ -15,41 +14,9 @@
         ] };
     let selectedModel ={ id: "a1", text: `Ferrari Portofino M` };
 
-    const theme = {
-                calendar: {
-                width: "700px",
-                maxWidth: "100vw",
-                legend: {
-                height: "45px"
-                },
-                shadow: "0px 10px 26px rgba(0, 0, 0, 0.25)",
-                colors: {
-                text: {
-                    primary: "#eee",
-                    highlight: "#fff"
-                },
-                background: {
-                    primary: "#333",
-                    highlight: "#1065CC",
-                    hover: "#222"
-                },
-                border: "#222"
-                },
-                font: {
-                regular: "1.5em",
-                large: "37em"
-                },
-                grid: {
-                disabledOpacity: ".5",
-                outsiderOpacity: ".7"
-                }
-            }
-            }; 
-    const today = new Date();
-	const tomorrow = dayjs().add(30, 'day').toDate();
-    let nDate = today;
-    let nDay ="";
 
+    let nDay ="";
+    let nDate = '2021-11-11';
     const availableMorning = async () => {const { data, error } = await supabase
         .from('test_Drive')
         .select('Day, Morning')
@@ -122,7 +89,8 @@
     <BrandSelect bind:selectedBrand bind:selectedModel></BrandSelect>
     <ModelSelect bind:selectedModel {selectedBrand}></ModelSelect>  
 
-    <span class="text-white text-xl"> Choose your available date: </span><Datepicker  start={today} end={tomorrow} {theme} />
+    <span class="text-white text-xl"> Choose your available date: </span>
+    <SveltyPicker inputClasses="form-control" format="yyyy-mm-dd" bind:value={nDate}></SveltyPicker>
     <div class="mb-3 xl:w-96">
         <label class="text-white text-xl py-0 mt-2" for=nDay>Choose your available time slot:</label>
         <select bind:value={nDay} class="form-select appearance-none
